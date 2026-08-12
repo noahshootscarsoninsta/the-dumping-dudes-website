@@ -146,6 +146,7 @@ header.site-header {
   font-weight: 800;
   font-size: 1.7rem;
   color: var(--dark);
+  margin-right: 50px;
 }
 .logo-img {
   height: 208px;
