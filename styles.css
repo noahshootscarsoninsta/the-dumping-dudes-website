@@ -211,7 +211,9 @@ nav.main-nav a.active { color: var(--primary); border-color: var(--accent); }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: linear-gradient(120deg, var(--dark) 0%, var(--primary) 100%);
+  background:
+    linear-gradient(120deg, rgba(28,23,18,0.82) 0%, rgba(156,59,44,0.72) 100%),
+    url('https://images.unsplash.com/photo-1774977867718-e926bedc8740?q=80&w=1920&auto=format&fit=crop') center 35%/cover no-repeat;
   color: var(--white);
   overflow: hidden;
 }
