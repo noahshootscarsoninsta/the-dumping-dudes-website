@@ -148,6 +148,9 @@ header.site-header {
   color: var(--dark);
   margin-right: 50px;
 }
+header.site-header .logo {
+  margin-left: -60px;
+}
 .logo-img {
   height: 208px;
   width: auto;
