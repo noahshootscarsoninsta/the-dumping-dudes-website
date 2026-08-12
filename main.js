@@ -18,11 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* Highlight current page in nav */
-  var here = (window.location.pathname.split('/').pop() || 'index.html');
+  /* Highlight current page in nav
+     Works whether pages are served as literal .html files or as the
+     extensionless "pretty URLs" Netlify serves by default. */
+  var normalize = function (path) {
+    return path.replace(/^\/+/, '').replace(/\.html$/, '').replace(/\/+$/, '') || 'index';
+  };
+  var here = normalize(window.location.pathname);
   document.querySelectorAll('.main-nav a').forEach(function (link) {
-    var href = link.getAttribute('href');
-    if (href === here || (here === '' && href === 'index.html')) {
+    var href = link.getAttribute('href') || '';
+    if (normalize(href) === here) {
       link.classList.add('active');
     }
   });
